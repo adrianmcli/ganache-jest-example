@@ -17,7 +17,7 @@ In this example, there are only 4 dependencies!
 
 ## Files
 
-There are only 3 files you should be concerned about.
+There are only 3 files you need to be concerned about.
 
 ### `SimpleStorage.sol`
 
