@@ -1,6 +1,6 @@
 # Minimal Solidity contract testing with Ganache and Jest
 
-A Truffle project is a great way to start a dapp, but sometimes you want a more lightweight option. For example, instead of having to pull-off migrations, maybe you just want to compile and test right-away.
+A Truffle project is a great way to start a dapp, but sometimes you want something more lightweight. For example, instead of having to pull-off migrations, maybe you just want to compile a simple smart contract and test right-away.
 
 No worries, the Truffle suite of tools has got you covered! Using Ganache, you can easily spawn a test blockchain for your tests.
 
