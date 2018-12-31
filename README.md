@@ -4,7 +4,16 @@ While I always recommend people to start off their dapps with a Truffle project,
 
 No worries, the Truffle suite of tools has got you covered! With Ganache and Truffle-Compile, you have everything you need to compile and test your smart contracts.
 
-## The files in this repo
+## Dependencies
+
+There are only 4 simple dependencies!
+
+- `ganache-core` — Allows us to spawn a "test blockchain".
+- `jest` — A testing framework.
+- `truffle-compile` — Compiles our Solidity contract to a Truffle artifact.
+- `web3` — Allows us to interact with our contract and do other Ethereum things.
+
+## Files
 
 ### `SimpleStorage.sol`
 
