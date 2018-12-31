@@ -22,7 +22,7 @@ describe("test stuff", () => {
     // 3. Create initial contract instance
     const instance = new web3.eth.Contract(SimpleStorage.abi);
 
-    // 4. Deploy contract and get new deployed Instance
+    // 4. Deploy contract and get new deployed instance
     const deployedInstance = await instance
       .deploy({ data: SimpleStorage.evm.bytecode.object })
       .send({ from: accounts[0], gas: 150000 });

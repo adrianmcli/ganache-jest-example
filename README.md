@@ -1,8 +1,10 @@
 # Minimal Solidity contract testing with Ganache and Jest
 
-While I always recommend people to start off their dapps with a Truffle project, some might prefer a more lightweight option. For example, instead of having to pull-off migrations, maybe you just want to compile and test right-away.
+A Truffle project is a great way to start a dapp, but sometimes you want a more lightweight option. For example, instead of having to pull-off migrations, maybe you just want to compile and test right-away.
 
 No worries, the Truffle suite of tools has got you covered! Using Ganache, you can easily spawn a test blockchain for your tests.
+
+**Note:** This example uses `solc` to compile the contract. If you prefer to use `truffle-contract` (makes the JSON artifact a little easier to work with), check out the `truffle-contract` branch [here](https://github.com/adrianmcli/ganache-jest-example/tree/truffle-contract).
 
 ## Dependencies
 
