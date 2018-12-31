@@ -5,8 +5,6 @@ const Ganache = require("ganache-core");
 const Web3 = require("web3");
 const compile = require("./compile");
 
-jest.setTimeout(20000); // provide enough time to download compiler if not cached
-
 describe("test stuff", () => {
   let contractInstance;
   let accounts;
@@ -26,7 +24,7 @@ describe("test stuff", () => {
 
     // 4. Deploy contract and get new deployed Instance
     const deployedInstance = await instance
-      .deploy({ data: SimpleStorage.bytecode })
+      .deploy({ data: SimpleStorage.evm.bytecode.object })
       .send({ from: accounts[0], gas: 150000 });
 
     // 5. Assign deployed contract instance to variable

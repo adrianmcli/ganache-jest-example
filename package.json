@@ -13,7 +13,7 @@
   "devDependencies": {
     "ganache-core": "^2.3.3",
     "jest": "^23.6.0",
-    "truffle-compile": "^4.0.0",
+    "solc": "^0.5.2",
     "web3": "^1.0.0-beta.37"
   }
 }
