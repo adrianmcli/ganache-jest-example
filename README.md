@@ -17,6 +17,8 @@ In this example, there are only 4 dependencies!
 
 ## Files
 
+There are only 3 files you should be concerned about.
+
 ### `SimpleStorage.sol`
 
 This is a simple Solidity contract that we will use as our example. It allows you to set and get an integer and nothing more.
