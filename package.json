@@ -1,10 +1,11 @@
 {
   "name": "ganache-jest-example",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A barebones demonstration of testing Solidity contracts",
+  "main": "test.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest test.js",
+    "start": "npm test"
   },
   "keywords": [],
   "author": "",
