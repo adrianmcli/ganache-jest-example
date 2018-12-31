@@ -25,13 +25,11 @@ describe("test stuff", () => {
     const instance = new web3.eth.Contract(SimpleStorage.abi);
 
     // 4. Deploy contract and get new deployed Instance
-    console.log("Deploying contract...");
     const deployedInstance = await instance
       .deploy({ data: SimpleStorage.bytecode })
       .send({ from: accounts[0], gas: 150000 });
 
     // 5. Assign deployed contract instance to variable
-    console.log("Contract deployed at:", deployedInstance._address);
     contractInstance = deployedInstance;
   });
 
