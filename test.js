@@ -11,6 +11,7 @@ describe("test stuff", () => {
   let provider;
   let web3;
   beforeAll(async () => {
+    try {
     // 1. Compile contract artifact
     const { SimpleStorage } = await compile("SimpleStorage.sol");
 
@@ -22,13 +23,23 @@ describe("test stuff", () => {
     // 3. Create initial contract instance
     const instance = new web3.eth.Contract(SimpleStorage.abi);
 
-    // 4. Deploy contract and get new deployed instance
+    // 4. Estimate gas
+    const gas = await instance
+      .deploy({ data: SimpleStorage.evm.bytecode.object })
+      .estimateGas();
+
+    // 5. Deploy contract and get new deployed instance
     const deployedInstance = await instance
       .deploy({ data: SimpleStorage.evm.bytecode.object })
-      .send({ from: accounts[0], gas: 150000 });
+      .send({ from: accounts[0], gas: gas + 1 });
 
-    // 5. Assign deployed contract instance to variable
+    // 6. Assign deployed contract instance to variable
     contractInstance = deployedInstance;
+
+    } catch(err) {
+      // handle error
+      throw err
+    }
   });
 
   afterAll(async () => {
